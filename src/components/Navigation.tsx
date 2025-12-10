@@ -4,7 +4,6 @@ export default function Navigation() {
       <section className="p-2 pl-8 pr-8  w-full rounded-4xl shadow-2xl bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-10 gap-2 grid grid-cols-5">
         <a href="https://infosnak.jkahya.com">
           <div className="flex flex-col items-center">
-            {" "}
             {/* ✨ 수정: flex-col 추가 */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
