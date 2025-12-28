@@ -95,7 +95,7 @@ export default function RootLayout({
         className={`antialiased h-full w-full bg-gradient from-slate-50 via-pink-200 to-purple-100`}
       >
         <OneNavi />
-        <div className="md:ml-64 transition-all duration-300">{children}</div>
+        <main className="md:ml-64 transition-all duration-300">{children}</main>
         <div className="mt-40">&nbsp;</div>
       </body>
     </html>

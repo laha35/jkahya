@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // ✨ 핵심: 현재 경로 가져오기
+import Modal from "@/components/Modal";
 
 export default function OneNavi() {
   const pathname = usePathname(); // 현재 URL (예: "/one/swi24")
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
@@ -122,12 +124,15 @@ export default function OneNavi() {
           <NavItem href="/one/m3u8" currentPath={pathname}>
             M3U8 Player
           </NavItem>
+          <NavItem href="/one/webhook" currentPath={pathname}>
+            Discord Webhook
+          </NavItem>
 
           <div className="pt-4 border-t border-gray-200 my-2"></div>
           <div className="n2 text-xs font-semibold text-gray-400 px-2 mb-2 uppercase tracking-wider">
             Help
           </div>
-          <NavItem href="/one/download" disabled currentPath={pathname}>
+          <NavItem href="/one/download" currentPath={pathname}>
             Download
           </NavItem>
           <div className="pt-4 border-t border-gray-200 my-2"></div>

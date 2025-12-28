@@ -39,7 +39,7 @@ export default function M3u8Page() {
             value={inputUrl}
             onChange={(e) => setInputUrl(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 px-5 py-3 rounded-2xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-400 transition-all text-slate-700"
+            className="flex-1 px-5 py-3 rounded-2xl bg-slate-100 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-400 transition-all text-slate-700"
           />
           <button
             onClick={handlePlay}

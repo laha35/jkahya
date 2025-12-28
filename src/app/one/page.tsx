@@ -1,6 +1,12 @@
+"use client";
+
 import Card from "@/components/Card";
+import { useState } from "react";
+import Modal from "@/components/Modal";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="w-full px-3 max-w-5xl mx-auto">
       <Card>
@@ -34,20 +40,30 @@ export default function Home() {
         <h1 className="text-lg n2 text-center">
           JKAhya One 서비스를 통해, 모든 서비스를 한곳에서 이용하실 수 있습니다.
         </h1>
-      </Card>
-      <Card>
-        <div className="text-center text-lg n2">
-          모바일에 최적화된 사이트입니다.
-        </div>
-      </Card>
-      <Card>
-        <div className="text-center text-lg n2">
-          웹표준과 시멘틱웹을 따르고 싶습니다.
-          <br />
-          Copyright © laha35. All rights reserved.
-          <br />
-          From TinyFloor 조합
-        </div>
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="block mx-auto mt-10 px-6 py-3 bg-rose-400 text-white font-bold rounded-2xl shadow-2xl hover:bg-rose-500 transition-all"
+        >
+          패치노트
+        </button>
+
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          title="패치노트"
+          footer={
+            <>
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="px-6 py-2 bg-rose-400 text-white font-bold rounded-xl shadow-sm"
+              >
+                확인
+              </button>
+            </>
+          }
+        >
+          <p className="n2">- 2025-12-28: One 서비스 출범에 따른 사이트 변경</p>
+        </Modal>
       </Card>
     </div>
   );
