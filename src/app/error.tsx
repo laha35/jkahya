@@ -76,13 +76,6 @@ export default function Error({
               홈으로 돌아가기
             </Link>
           </div>
-
-          {/* 에러 코드 노출 (선택 사항) */}
-          <div className="mt-12 pt-8 border-t">
-            <p className="text-[10px] uppercase tracking-widest text-slate-400 font-medium">
-              Error Reporting ID: {error.digest || "Internal Server Error"}
-            </p>
-          </div>
         </section>
       </div>
     </div>
