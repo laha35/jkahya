@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import OneNavi from "@/components/OneNavi";
 
 export const metadata: Metadata = {
   title: "JKAhya",
@@ -93,11 +94,9 @@ export default function RootLayout({
       <body
         className={`antialiased h-full w-full bg-gradient from-slate-50 via-pink-200 to-purple-100`}
       >
-        {children}
+        <OneNavi />
+        <div className="md:ml-64 transition-all duration-300">{children}</div>
         <div className="mt-40">&nbsp;</div>
-        <div className="fixed bottom-5 px-5 w-full flex justify-center items-center">
-          <Navigation />
-        </div>
       </body>
     </html>
   );

@@ -3,8 +3,7 @@ import OneNavi from "@/components/OneNavi";
 
 export default function Home() {
   return (
-    <div className="w-full px-3">
-      <OneNavi />
+    <div className="w-full px-3 max-w-5xl mx-auto">
       <Card>
         <div className="text-lg n1 text-center">
           <div className="mb-5 text-xl n2 bg-red-600 text-gray-50 px-3 py-1 rounded-2xl drop-shadow-2xl shadow-black">

@@ -6,7 +6,7 @@ const withPWA = require("@ducanh2912/next-pwa").default({
   aggressiveFrontEndNavCaching: true,
   reloadOnOnline: true, // 온라인 상태가 되면 새로고침
   swcMinify: true,
-  //disable: process.env.NODE_ENV === "development", // 개발 모드에서는 PWA 비활성화 (권장)
+  disable: process.env.NODE_ENV === "development", // 개발 모드에서는 PWA 비활성화 (권장)
   // workboxOptions: { ... } // 필요 시 워크박스 상세 설정
 });
 
