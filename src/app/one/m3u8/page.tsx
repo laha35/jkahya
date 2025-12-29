@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Title from "@/components/Title"; // 기존 Title 컴포넌트 활용
 import M3u8Player from "@/components/M3u8Player"; // 기존 Player 컴포넌트
+import Card from "@/components/Card";
 
 export default function M3u8Page() {
   // 1. 입력창의 텍스트를 담는 상태
@@ -31,7 +32,7 @@ export default function M3u8Page() {
       <Title title="M3U8 Player" lore="Easy M3U8 Player" />
 
       {/* 입력 폼 영역 */}
-      <section className="mt-6 mb-8 p-6 bg-white/50 backdrop-blur-md rounded-3xl shadow-xl">
+      <Card>
         <div className="flex flex-col md:flex-row gap-3">
           <input
             type="text"
@@ -51,10 +52,10 @@ export default function M3u8Page() {
         <p className="text-xs text-slate-400 mt-3 ml-2">
           * .m3u8 확장자로 끝나는 스트리밍 주소를 입력하세요.
         </p>
-      </section>
+      </Card>
 
       {/* 플레이어 영역 */}
-      <div className="overflow-hidden rounded-3xl shadow-2xl bg-black aspect-video flex items-center justify-center">
+      <div className="mt-10 overflow-hidden rounded-3xl shadow-2xl bg-black aspect-video flex items-center justify-center">
         {videoSrc ? (
           <M3u8Player src={videoSrc} autoplay={true} />
         ) : (

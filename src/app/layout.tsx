@@ -103,7 +103,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body
-        className={`antialiased h-full w-full bg-gradient from-slate-50 via-pink-200 to-purple-100`}
+        className={`antialiased h-full w-full bg-gradient-to-r from-slate-50 via-pink-50 to-purple-50`}
       >
         <noscript>
           <iframe

@@ -57,11 +57,11 @@ export default function Error({
             페이지를 찾을 수 없어요.
           </h1>
           <p className="n2 text-lg text-slate-500 leading-relaxed mb-10 max-w-md mx-auto">
-            요청하신 작업을 처리하는 중에
+            요청하신 페이지는 존재하지 않거나,
             <br />
-            예상치 못한 오류가 발생했습니다.
+            이동된것 같아요.
             <br />
-            잠시 후 다시 시도해 주세요.
+            주소를 다시 한 번 확인해 주세요.
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">

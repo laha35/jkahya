@@ -127,6 +127,9 @@ export default function OneNavi() {
           <NavItem href="/one/webhook" currentPath={pathname}>
             Discord Webhook
           </NavItem>
+          <NavItem href="/one/railc" currentPath={pathname}>
+            RailWay Stopwatch
+          </NavItem>
 
           <div className="pt-4 border-t border-gray-200 my-2"></div>
           <div className="n2 text-xs font-semibold text-gray-400 px-2 mb-2 uppercase tracking-wider">
