@@ -17,6 +17,17 @@ export default function RootLayout({
   return (
     <html lang="ko-kr">
       <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6514289414091919"
+          crossOrigin="anonymous"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N4V6GPGC');",
+          }}
+        />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
@@ -94,6 +105,14 @@ export default function RootLayout({
       <body
         className={`antialiased h-full w-full bg-gradient from-slate-50 via-pink-200 to-purple-100`}
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-N4V6GPGC"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <OneNavi />
         <main className="md:ml-64 transition-all duration-300">{children}</main>
         <div className="mt-40">&nbsp;</div>
